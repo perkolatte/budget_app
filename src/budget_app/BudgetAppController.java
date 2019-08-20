@@ -1,6 +1,6 @@
 package budget_app;
 
-public class test {
+public class BudgetAppController {
 
     public static void main(String[] args) {
 
