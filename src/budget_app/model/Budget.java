@@ -1,4 +1,4 @@
-package budget_app.pojos;
+package budget_app.model;
 
 public class Budget {
 
