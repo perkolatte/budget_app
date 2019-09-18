@@ -20,7 +20,7 @@ public class BudgetAppController {
     }
 
     public static void testReadAccount() throws CriticalDatabaseException {
-        ArrayList<Account> accounts = AccountMapper.readAccountTable();
+        ArrayList<Account> accounts = AccountMapper.readAccountTable("SELECT * FROM BudgetAppDB.account");
 
         for (Account account : accounts) {
 
