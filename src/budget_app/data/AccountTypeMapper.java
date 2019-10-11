@@ -18,6 +18,7 @@ public class AccountTypeMapper {
 
         try {
             accounts = readAccountTypes(query, databaseReader.connection);
+            databaseReader.finalize();
         } catch (Exception e) {
             e.printStackTrace();
             throw new CriticalDatabaseException("Unable to connect to database. :(");

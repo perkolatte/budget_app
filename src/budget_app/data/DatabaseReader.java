@@ -15,7 +15,7 @@ public class DatabaseReader {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); //com.mysql.jdbc.Driver deprecated
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/BudgetAppDB?user=root&password=nouN733_berN&useSSL=false&serverTimezone=America/Los_Angeles");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/BudgetAppDB?user=root&password=nouN733_berN&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Los_Angeles");
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -27,7 +27,7 @@ public class DatabaseReader {
 
     }
 
-    protected void finalize() throws Throwable {
+    protected void finalize() throws Exception {
         connection.close();
     }
 
@@ -48,7 +48,7 @@ public class DatabaseReader {
 //                        resultSet.getString("account_name"),
 //                        resultSet.getInt("account_type_id"),
 //                        resultSet.getDouble("account_balance"));
-//                accountList.add(account);
+//                accountList.addAccount(account);
 //
 //            }
 //
@@ -82,7 +82,7 @@ public class DatabaseReader {
 //
 //                AccountType accountType = new AccountType(  resultSet.getInt("account_type_id"),
 //                        resultSet.getString("account_type_name"));
-//                accountTypeList.add(accountType);
+//                accountTypeList.addAccount(accountType);
 //
 //            }
 //
