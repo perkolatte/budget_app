@@ -3,17 +3,33 @@ package budget_app.model;
 public class Budget {
 
     private int budget_id;
-    private double amount;
-    private int category_id;
-    private int parent_category_id;
     private int user_id;
+    private int parent_category_id;
+    private int category_id;
+    private double amount;
 
-    public Budget(int budget_id, double amount, int category_id, int parent_category_id, int user_id) {
-        this.budget_id = budget_id;
-        this.amount = amount;
-        this.category_id = category_id;
-        this.parent_category_id = parent_category_id;
+    public Budget(int user_id, int parent_category_id) {
         this.user_id = user_id;
+        this.parent_category_id = parent_category_id;
+    }
+
+    public Budget(int user_id, int parent_category_id, double amount) {
+        this.user_id = user_id;
+        this.parent_category_id = parent_category_id;
+        this.amount = amount;
+    }
+
+    public Budget(int user_id, int parent_category_id, int category_id) {
+        this.user_id = user_id;
+        this.parent_category_id = parent_category_id;
+        this.category_id = category_id;
+    }
+
+    public Budget(int user_id, int parent_category_id, int category_id, double amount) {
+        this.user_id = user_id;
+        this.parent_category_id = parent_category_id;
+        this.category_id = category_id;
+        this.amount = amount;
     }
 
     public int getBudget_id() {

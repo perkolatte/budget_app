@@ -5,8 +5,7 @@ public class AccountType {
     private int account_type_id;
     private String account_type_name;
 
-    public AccountType(int account_type_id, String account_type_name) {
-        this.account_type_id = account_type_id;
+    public AccountType(String account_type_name) {
         this.account_type_name = account_type_name;
     }
 

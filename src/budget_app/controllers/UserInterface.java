@@ -42,9 +42,10 @@ public class UserInterface {
 
         switch (selection) {
             case 1 :
-                transactionMenu();// show transaction and options
+                transactionMenu(1);// show transaction and options
                 break;
             case 2 :
+                accountMenu();
                 // show recent transactions and options
                 break;
             case 3 :
@@ -56,20 +57,25 @@ public class UserInterface {
 
     }
 
-    private void transactionMenu() {
+    private void transactionMenu(int pageNumber) {
 
-        System.out.println("Transactions");
+        System.out.println("Transactions\n");
+        System.out.println("Recent:");
+        listTransactions(pageNumber);
+        // show recent transactions and options
 
         int selection = userInput.nextInt();
 
         switch (selection) {
             case 1 :
-                TransactionService.addTransaction();// add transaction
+                addTransaction();// add transaction
                 break;
             case 2 :
+                listTransactions(pageNumber);
                 // show recent transactions and options
                 break;
             case 3 :
+
                 // show budgets and options
                 break;
             default :
@@ -78,9 +84,21 @@ public class UserInterface {
 
     }
 
+    private void listTransactions(int pageNumber) {
+
+        // show requested page of 10 transactions
+
+    }
+
+    public void transactionOptions() {
+
+
+
+    }
+
     public void addTransaction() {
 
-                
+
 
     }
 
