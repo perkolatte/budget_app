@@ -9,7 +9,7 @@ import budget_app.services.UserService;
 
 import java.util.Scanner;
 
-public class UserInterface {
+public class MainInterface {
 
     Scanner userInput = new Scanner(System.in);
 
@@ -19,7 +19,7 @@ public class UserInterface {
 
         UserService.getLastUser();
 
-        System.out.println("Welcome!\n");
+        System.out.println("Welcome!");
         mainMenu();
 
 //        try {
@@ -33,22 +33,26 @@ public class UserInterface {
 
     private void mainMenu() {
 
-        System.out.println("What would you like to do?\n");
+        System.out.println("\n\nMain Menu\n");
+
         System.out.println("1. Transactions");
         System.out.println("2. Accounts");
-        System.out.println("3. Budgets");
+        //System.out.println("3. Budgets");
 
+        System.out.println();
+        System.out.print("Enter selection: ");
         int selection = userInput.nextInt();
 
         switch (selection) {
             case 1 :
-                transactionMenu(1);// show transaction and options
+                TransactionInterface.transactionMenu(1);// show transaction and options
                 break;
             case 2 :
-                accountMenu();
-                // show recent transactions and options
+                AccountInterface.accountMenu(1); // show recent transactions and options
                 break;
             case 3 :
+                System.out.println("Budgeting is not yet available. Stay tuned!");
+                mainMenu();
                 // show budgets and options
                 break;
             default :
@@ -57,32 +61,7 @@ public class UserInterface {
 
     }
 
-    private void transactionMenu(int pageNumber) {
 
-        System.out.println("Transactions\n");
-        System.out.println("Recent:");
-        listTransactions(pageNumber);
-        // show recent transactions and options
-
-        int selection = userInput.nextInt();
-
-        switch (selection) {
-            case 1 :
-                addTransaction();// add transaction
-                break;
-            case 2 :
-                listTransactions(pageNumber);
-                // show recent transactions and options
-                break;
-            case 3 :
-
-                // show budgets and options
-                break;
-            default :
-                System.out.println("No matching selection. Please enter a number from the ones above.");
-        }
-
-    }
 
     private void listTransactions(int pageNumber) {
 

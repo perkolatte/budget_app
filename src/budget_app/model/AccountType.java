@@ -9,6 +9,11 @@ public class AccountType {
         this.account_type_name = account_type_name;
     }
 
+    public AccountType(int account_type_id, String account_type_name) {
+        this.account_type_id = account_type_id;
+        this.account_type_name = account_type_name;
+    }
+
     public int getAccount_type_id() {
         return account_type_id;
     }

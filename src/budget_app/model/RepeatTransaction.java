@@ -31,3 +31,7 @@ public class RepeatTransaction {
 
 // Does Mint have APIs? Am I able to use their data to gather insights and predict future balances/savings?
 // Estimate future balance based on reduced spending in given category?
+// Nope: https://help.developer.intuit.com/s/question/0D5G000004cWU1EKAW/access-to-mintcom-api
+//
+//It seems I need to reduce the scope of the app down to a simple manual transaction tracker.
+// At least for now.

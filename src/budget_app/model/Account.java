@@ -13,6 +13,13 @@ public class Account {
         this.account_balance = account_balance;
     }
 
+    public Account(int account_id, String account_name, int account_type_id, double account_balance) {
+        this.account_id = account_id;
+        this.account_name = account_name;
+        this.account_type_id = account_type_id;
+        this.account_balance = account_balance;
+    }
+
     public int getAccount_id() {
         return account_id;
     }

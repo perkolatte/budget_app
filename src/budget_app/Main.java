@@ -8,14 +8,14 @@ package budget_app;
 //
 //import java.util.ArrayList;
 
-import budget_app.controllers.UserInterface;
+import budget_app.controllers.MainInterface;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        UserInterface userInterface = new UserInterface();
-        userInterface.start();
+        MainInterface mainInterface = new MainInterface();
+        mainInterface.start();
 
     }
 
